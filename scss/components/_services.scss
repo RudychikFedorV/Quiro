@@ -1,0 +1,90 @@
+.services {
+  padding-top: 140rem;
+  margin-bottom: 111rem;
+
+  &__title {
+    color: var(--c-Paragraph);
+    font: var(--Heading-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70rem;
+    @include tablet {
+      font: var(--Heading-4);
+      margin-bottom: 35rem;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    margin-inline: auto;
+    max-width: 837rem;
+    color: var(--c-Paragraph);
+    text-align: center;
+    font: var(--Paragraph);
+    margin-bottom: 123rem;
+    @include tablet {
+      margin-bottom: 35rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 26rem;
+    // flex-shrink: 0;
+    @include tablet-small {
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-items: center;
+      gap: 10rem;
+    }
+  }
+  &__item {
+    max-width: 370px;
+    padding-top: 46rem;
+    padding-bottom: 51rem;
+    border-radius: 15px;
+    transition: var(--transition);
+    background: var(--c-Terciary);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      margin-top: 30rem;
+    }
+  }
+  &__item:hover {
+    background: var(--c-primary);
+  }
+  &__item:hover .block {
+    color: var(--c-text-white);
+  }
+  
+  
+
+  &__item-icons {
+    max-width: 109.509rem;
+    max-height: 109.509rem;
+    margin-bottom: 28rem;
+    @include tablet {
+      margin-bottom: 20rem;
+    }
+  }
+
+  &__item-appointments {
+    color: var(--c-Paragraph);
+    font: var(--Heading-4);
+    margin-bottom: 17rem;
+  }
+
+  &__item-desc {
+    max-width: 318rem;
+    color: var(--c-Text);
+    text-align: center;
+    font: var(--c-Paragraph);
+    margin-bottom: 18rem;
+  }
+
+  
+}

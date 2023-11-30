@@ -1,0 +1,111 @@
+.specialist {
+
+  &__title {
+    color: var(--c-Paragraph);
+    font: var(--Heading-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70rem;
+    @include tablet {
+      font: var(--Heading-4);
+      margin-bottom: 35rem;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    margin-inline: auto;
+    max-width: 837rem;
+    color: var(--c-Paragraph);
+    text-align: center;
+    font: var(--Paragraph);
+    margin-bottom: 123rem;
+    @include tablet {
+      margin-bottom: 35rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 26rem;
+    flex-shrink: 0;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      gap: 10rem;
+    }
+
+    @include tablet-small {
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-items: center;
+      gap: 10rem;
+    }
+  }
+
+  &__item {
+    border-radius: 20rem;
+    background: var(--c-Terciary);
+    padding: 44rem 38rem 0 39rem;
+
+  }
+
+  &__item-container {
+    display: flex;
+    align-items: center;
+    gap: 13rem;
+    flex-shrink: 0;
+  }
+
+  &__item-img {
+    max-width: 63rem;
+    max-height: 63rem;
+    flex-shrink: 0;
+    border-radius: 63rem;
+    margin-bottom: 25rem;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  }
+
+  &__item-cont {
+    flex-grow: 1;
+  }
+  &__item-title {
+    color: var(--c-Paragraph);
+    font: var(--Button);
+    margin-bottom: 3rem;
+  }
+
+  &__item-text {
+    color: var(--c-Text);
+    font: var(--c-Paragraph);
+  }
+
+  &__item-info {
+    max-width: 293px;
+    display: flex;
+    margin-inline: auto;
+    margin-bottom: 28rem;
+  }
+
+  &__item-button {
+    padding: 10rem 49rem;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    border-radius: 50rem;
+    background: var(--c-primary);
+    color: var(--c-Terciary);
+    font: var(--Button);
+    transition: var(--transition);
+    margin-bottom: 33rem;
+    &:hover {
+      background: lighten(#8842f0, 5%);
+    }
+  }
+}
