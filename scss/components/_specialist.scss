@@ -1,5 +1,4 @@
 .specialist {
-
   &__title {
     color: var(--c-Paragraph);
     font: var(--Heading-2);
@@ -94,8 +93,12 @@
     display: flex;
     margin-inline: auto;
     margin-bottom: 28rem;
+    @include desktop-small {
+      max-width: none;
+    }
     @include tablet-small {
       font: var(--Input);
+      max-width: 293px;
     }
   }
 

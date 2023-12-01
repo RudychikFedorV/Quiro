@@ -86,13 +86,9 @@
     margin-bottom: 18rem;
   }
   &__item-link {
-    position: relative;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 13rem;
   }
 
-  &__item-arrow {
-    position: absolute;
-    bottom: 0;
-    transform: translateX(50%);
-  }
 }
