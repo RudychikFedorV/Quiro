@@ -30,7 +30,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 26rem;
-    flex-shrink: 0;
+    // flex-shrink: 0;
 
     @include tablet {
       grid-template-columns: 1fr 1fr;
@@ -51,7 +51,6 @@
     border-radius: 20rem;
     background: var(--c-Terciary);
     padding: 44rem 38rem 0 39rem;
-
   }
 
   &__item-container {
@@ -59,6 +58,7 @@
     align-items: center;
     gap: 13rem;
     flex-shrink: 0;
+    margin-bottom: 25rem;
   }
 
   &__item-img {
@@ -66,7 +66,6 @@
     max-height: 63rem;
     flex-shrink: 0;
     border-radius: 63rem;
-    margin-bottom: 25rem;
     background: url(<path-to-image>), lightgray 50% / cover no-repeat;
   }
 
@@ -77,11 +76,17 @@
     color: var(--c-Paragraph);
     font: var(--Button);
     margin-bottom: 3rem;
+    @include tablet-small {
+      font: var(--Paragraph-2);
+    }
   }
 
   &__item-text {
     color: var(--c-Text);
     font: var(--c-Paragraph);
+    @include tablet-small {
+      font: var(--Input);
+    }
   }
 
   &__item-info {
@@ -89,12 +94,16 @@
     display: flex;
     margin-inline: auto;
     margin-bottom: 28rem;
+    @include tablet-small {
+      font: var(--Input);
+    }
   }
 
   &__item-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10rem 49rem;
-    display: inline-block;
-    text-align: center;
     cursor: pointer;
     outline: 0;
     border: 0;
@@ -106,6 +115,14 @@
     margin-bottom: 33rem;
     &:hover {
       background: lighten(#8842f0, 5%);
+    }
+    @include desktop-small {
+      padding: 10rem 20rem;
+    }
+
+    @include tablet-small {
+      font: var(--Paragraph);
+      padding: 10rem 20rem;
     }
   }
 }

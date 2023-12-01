@@ -21,6 +21,7 @@
 			position: absolute;
 			right: 15rem;
 			top: 50%;
+			cursor: pointer;
 			transform: translateY(-50%);
 			color: var(--c-text-white);
 		}
@@ -38,6 +39,9 @@
 
 			&::placeholder {
 				color: var(--c-text-white);
+			}
+			&::-webkit-search-cancel-button {
+				display: none;
 			}
 		}
 	}

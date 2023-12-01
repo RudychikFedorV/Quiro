@@ -32,7 +32,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 26rem;
-    // flex-shrink: 0;
+    flex-shrink: 0;
     @include tablet-small {
       grid-template-columns: 1fr;
       align-items: center;
@@ -41,9 +41,7 @@
     }
   }
   &__item {
-    max-width: 370px;
-    padding-top: 46rem;
-    padding-bottom: 51rem;
+    padding: 46rem 26rem 51rem 26rem;
     border-radius: 15px;
     transition: var(--transition);
     background: var(--c-Terciary);
@@ -60,8 +58,6 @@
   &__item:hover .block {
     color: var(--c-text-white);
   }
-  
-  
 
   &__item-icons {
     max-width: 109.509rem;
@@ -76,6 +72,10 @@
     color: var(--c-Paragraph);
     font: var(--Heading-4);
     margin-bottom: 17rem;
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__item-desc {
@@ -85,6 +85,14 @@
     font: var(--c-Paragraph);
     margin-bottom: 18rem;
   }
+  &__item-link {
+    position: relative;
+    text-align: center;
+  }
 
-  
+  &__item-arrow {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(50%);
+  }
 }
